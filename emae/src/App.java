@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class App {
+public class App <Contact>{
     static int randomInt;
     public static void main(String[] args) throws Exception {
         ArrayList<Integer> source = new ArrayList<Integer>();
@@ -10,7 +10,7 @@ public class App {
         splitList(source, positive, negative);
     }
 
-    static void splitList(ArrayList<Integer> source, ArrayList positive, ArrayList negative)
+    public static void splitList(ArrayList<Integer> source, ArrayList positive, ArrayList negative)
     {
         source = new ArrayList<Integer>();
         Random rand = new Random(); //заполнение случайными числа
@@ -26,9 +26,9 @@ public class App {
         final ArrayList<Integer> positiveFinal = positive;
 
         source.stream().forEach(i -> (i < 0 ? negativeFinal : positiveFinal).add(i));
-        Collections.sort(positive);
+        Collections.sort(positive);//сортировка
         Collections.sort(negative);
-        
+
         System.out.println("Source as-is: " + source);
         System.out.println("Positive: " + positive);
         System.out.println("Negative: " + negative);
