@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class App <Contact>{
+public class App {
     static int randomInt;
     public static void main(String[] args) throws Exception {
         ArrayList<Integer> source = new ArrayList<Integer>();
